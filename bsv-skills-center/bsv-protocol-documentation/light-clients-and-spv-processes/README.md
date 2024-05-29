@@ -2,9 +2,9 @@
 description: Users of blockchain only need block headers, not the full blockchain
 ---
 
-# Light Clients and SPV Processes
+# SPV Wallets and SPV Processes
 
-Transactions are a means used to write on to the Bitcoin Ledger. In the [Broken link](broken-reference "mention") topic we saw how various layers serving applications can be built on top of the core network of nodes which provide the base infrastructure.&#x20;
+Transactions are a means to create entries on the Bitcoin Ledger. In the [https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md](https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md "mention") topic we saw how various layers serving applications can be built on top of the core network of nodes which provide the base infrastructure.
 
 In this section, we will explore in depth the Simplified Payment Verification Process and its usage in applications known as light clients for the node network (which acts as a server of blockchain processes for these applications).
 
