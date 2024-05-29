@@ -50,7 +50,6 @@
       * [Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
       * [Privacy in Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
-* [The History of BSV Blockchain](bsv-skills-center/the-history-of-bsv-blockchain.md)
 
 ## Network Topology
 
