@@ -3,7 +3,7 @@
 ## BSV Skills Center
 
 * [Overview](README.md)
-    * [BSV Blockchain](bsv-skills-center/bsv-protocol-documentation/README.md)
+    * [BSV Blockchain](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/README.md)
       * [Introduction](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/README.md)
       * [Blocks](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/blocks.md)
       * [Transactions](bsv-skills-center/bsv-protocol-documentation/bsv-blockchain/transactions.md)
