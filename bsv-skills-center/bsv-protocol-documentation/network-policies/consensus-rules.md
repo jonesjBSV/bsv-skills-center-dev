@@ -8,11 +8,49 @@ A number of standard policies are set around network consensus and its ruleset. 
 
 ## **Genesis Block Rule**
 
-The blockchain is anchored to the very first block that was created on Jan 9th 2009. This marked the beginning of blockchain, hence the name, Genesis. Only blocks that add to the blockchain formed by building upon the Genesis block are valid.
+The blockchain is anchored to the very first block that was created on Jan 9th 2009. This marked the beginning of blockchain, hence the name, Genesis.
 
-The Genesis Block is special, as it was created with hardcoding values in the software rather than having been mined. The mining node network did not exist at the time of its creation. Part of this block included the first reward of 50 coins. These were designed not to be spendable, which is the reason why this block acts as the anchor to the blockchain.
+The Genesis Block is special, as it was created with hardcoded values rather than being mined. Part of this block included the first reward of 50 coins. These were designed to be unspendable, which is the reason why this block acts as the anchor to the blockchain.
 
 The 50 coins in the Genesis Coinbase transaction were transferred to a public key which was generated without a private key (ECC or elliptic curve cryptography allows this), making the public key invalid and these coins un-spendable.
+
+{% hint style="info" %}
+
+
+it is possible to generate a point on an elliptic curve without directly deriving it from a private key. Such points can be generated mathematically or chosen from predefined points on the curve. However, these points are not associated with a private key in the cryptographic sense and thus cannot be used for typical cryptographic operations like signing or encryption/decryption.
+
+Generating a Point on an Elliptic Curve
+
+To generate a point on an elliptic curve, you can select an x-coordinate and then solve for the corresponding y-coordinate using the elliptic curve equation. For a curve defined by the equation:
+
+y^2 = x^3 + ax + b
+
+you can choose an x-coordinate and solve for y. This approach involves the following steps:
+
+{% code overflow="wrap" %}
+```markup
+- Choose an x-coordinate.
+- Compute  y^2 = x^3 + ax + b .
+- Solve for y (if the right-hand side is a quadratic residue in the field).
+```
+{% endcode %}
+
+
+
+Explanation
+
+```
+1.	Select Curve Parameters: The secp256k1 curve is selected.
+2.	Choose Random x-coordinate: A random x-coordinate is selected.
+3.	Compute  y^2 : Calculate the right-hand side of the elliptic curve equation.
+4.	Solve for y: Check if the right-hand side is a quadratic residue modulo the prime field. If it is, compute the square root to find y.
+```
+
+Note
+
+* Quadratic Residue: The value x^3 + ax + b must be a quadratic residue in the field for a valid y to exist.
+* Security Considerations: The generated point is mathematically valid on the curve, but it isn’t associated with a private key. Such points can’t be used for operations requiring a private-public key pair.
+{% endhint %}
 
 The Genesis block rule prevents a malicious party from creating a new chain to perpetrate a malicious redirection of hash power or economic activity. It is an essential aspect of Simplified Payment Verification, allowing users to check they are using the correct chain of blocks with minimal overhead.
 
@@ -31,7 +69,7 @@ The protocol defines the size of a block by the number of transactions a node ha
 
 ## **Longest Chain Rule**
 
-As described in [mining.md](mining.md "mention"), the node is ­­­expected to always keep track of the longest honest chain while building on top of that chain. This is the minimal and optimal method for mining nodes to configure their software. If at any time a mining node is intentionally building on an alternative chain than the longest honest one, it is considered malicious and is in violation of the protocol.&#x20;
+As described in [mining.md](mining.md "mention"), the node is ­­­expected to always keep track of the longest honest chain while building on top of that chain. This is the minimal and optimal method for mining nodes to configure their software. If at any time a mining node is intentionally building on an alternative chain than the longest honest one, it is considered malicious and is in violation of the protocol.
 
 ## **Block Subsidy Rule**
 
