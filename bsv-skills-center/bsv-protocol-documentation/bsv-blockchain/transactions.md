@@ -62,7 +62,9 @@ Ink can be reclaimed if the envelope its in can't be opened. This can be done us
 
 ### Transaction Inputs and Outputs
 
-In traditional payment systems, a transaction will have a single input and single output due to the usage of account-based ledgers (Credit, Debit). Bitcoin's UTXO-based ledger allows a transaction to be like an envelope containing information. It can have many inputs and outputs. In each output, there is an option to add code to program how the value (tokens) associated with that output will be spent. This property makes every transaction an electronic contract when used in conjunction with the public ledger. The programming of UTXOs uses a native programming language called Script, allowing a large variety of electronic contracts to be supported natively.
+In traditional payment systems, a transaction will have a single input and single output due to the usage of account-based ledgers (Credit, Debit). Bitcoin's UTXO-based ledger allows a transaction to  have many inputs and outputs.
+
+Each output contains a predicate (evaluates to true or false) locking script that that must receive the correct missing information in order to evaluate to true when being included as an input in a new transaction. This property makes every transaction an electronic contract when used in conjunction with the public ledger. Locking scripts use a native programming language called Script (colloquially Bitcoin Script), allowing a large variety of electronic contracts to be supported natively.
 
 <figure><img src="../.gitbook/assets/WhatIsBlockchain_Slide19.png" alt=""><figcaption><p>Transaction Inputs and Outputs</p></figcaption></figure>
 
