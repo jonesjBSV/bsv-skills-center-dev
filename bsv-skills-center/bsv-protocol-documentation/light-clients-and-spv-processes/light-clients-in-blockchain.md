@@ -5,7 +5,7 @@ description: >-
   transactions are maintained by their owners
 ---
 
-# Light Clients in Blockchain
+# SPV Wallets
 
 A truly global blockchain is one where the blockchain network not only demonstrates a large transaction processing capability, but it is also able to account for how it can scale.
 
@@ -19,13 +19,13 @@ Something that is commonly misunderstood concerning blockchains is that business
 >
 > _I anticipate there will never be more than 100K nodes, probably less. It will reach an equilibrium where it's not worth it for more nodes to join in. The rest will be lightweight clients, which could be millions._
 >
-> _At equilibrium size, many nodes will be server farms with one or two network nodes that feed the rest of the farm over a LAN._" &#x20;
+> _At equilibrium size, many nodes will be server farms with one or two network nodes that feed the rest of the farm over a LAN._"
 
-The solution lies somewhere in the middle; it shouldn't be necessary to run a node or use third-party services. With light clients, there is no need for a business to run a node  This is because light clients offer all the features they need to be able to use blockchain whilst also minimising use of infrastructure. The biggest benefit is that there are no limitations on scaling the application usage of blockchain.
+The solution lies somewhere in the middle; it shouldn't be necessary to run a node or use third-party services. With light clients, there is no need for a business to run a node This is because light clients offer all the features they need to be able to use blockchain whilst also minimising use of infrastructure. The biggest benefit is that there are no limitations on scaling the application usage of blockchain.
 
-In terms of network topology, scaling happens at edges, not at nodes. Of course, nodes need to scale to be able to support global transaction volume, which is discussed in detail in the section: [Unbounded scaling.](broken-reference)
+In terms of network topology, scaling happens at edges, not at nodes. Of course, nodes need to scale to be able to support global transaction volume, which is discussed in detail in the section: [Unbounded scaling.](https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md)
 
-When any application is looking to utilise blockchain for data or payment transactions, they will need a set of components that enables them to read and write to the blockchain. You can find out more about the context of application and utility layers with blockchain networks in [Broken link](broken-reference "mention").
+When any application is looking to utilise blockchain for data or payment transactions, they will need a set of components that enables them to read and write to the blockchain. You can find out more about the context of application and utility layers with blockchain networks in [https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md](https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/broken-reference/README.md "mention").
 
 {% hint style="info" %}
 The blockchain system allows pruning but also equally, you can use SPV in the block header and the Merkle proof to prove the full existence and probity of all transactions till the Genesis on your system. This utilises the block headers and causes no overhead to miners/nodes. You can charge customers for the service.
@@ -35,13 +35,13 @@ There are no strict definitions of what a light client should be designed as exc
 
 The overall view of the blockchain network will show the network having only a small number of nodes at the core. Most of the other applications will function as light clients.
 
-<figure><img src="../.gitbook/assets/LightClientsandSPVInfastructures_Slide08 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/LightClientsandSPVInfastructures_Slide08%20(1).png" alt=""><figcaption></figcaption></figure>
 
 The diagram shows the overall network topology identifying everything except from the nodes as light clients.
 
 **What will these applications look like?**
 
-Applications, whether they are hosted in a data centre or a cloud platform, will include some components which allow them to interact with blockchain. Note that these applications will predominantly be focused only on writing transactions to the blockchain. They shouldn't need to read data written on the blockchain as they can store all of their transactions with the Merkle proof themselves.&#x20;
+Applications, whether they are hosted in a data centre or a cloud platform, will include some components which allow them to interact with blockchain. Note that these applications will predominantly be focused only on writing transactions to the blockchain. They shouldn't need to read data written on the blockchain as they can store all of their transactions with the Merkle proof themselves.
 
 The infrastructure requirements of a client application’s blockchain are:
 
@@ -53,12 +53,12 @@ The infrastructure requirements of a client application’s blockchain are:
    4. UX/UI as per feature requirements
 3. Transaction manager (could be part of wallet itself)
    1. Transaction creation and building custom transaction scripts
-   2. Transaction broadcaster to nodes&#x20;
-   3. Merkle proof retriever and storage&#x20;
-   4. SPV process validator&#x20;
+   2. Transaction broadcaster to nodes
+   3. Merkle proof retriever and storage
+   4. SPV process validator
    5. Signature and script validator
 
-Most applications which are using these components will need to either design the components based on their own needs or use the services offered by a third party.&#x20;
+Most applications which are using these components will need to either design the components based on their own needs or use the services offered by a third party.
 
 Reading Blockchain transactions in most cases will not be necessary, however there may be some scenarios where this might be desirable. One such case concerns the wallet itself, which stores keys and will need to provide the ability to restore transactions. In this situation the wallet will need to index all of the transactions that are part of the keys that it is hosting and, when required, may want to download all the transactions and their Merkle proof. The following might also be required:
 
@@ -70,7 +70,7 @@ Most of the nodes provide API endpoints with these services. Many of them provid
 
 The Bitcoin Association provide a reference implementation as a good starting point for such infrastructure. The following diagram provides an overview of this implementation.
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/image%20(17).png" alt=""><figcaption></figcaption></figure>
 
 Aptly called LiteClient, this contains most of the elements that have been discussed in this section. The LiteClient toolbox consists of:
 
