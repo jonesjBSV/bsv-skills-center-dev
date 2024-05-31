@@ -4,22 +4,19 @@ description: Transactions offer huge flexibility in terms of what can be done wi
 
 # Transaction Templates
 
-Generally, transactions are standardised using templates based on the utility. This implies that a standard script is used in a transaction input and transaction output for a specific use case.
+Transactions can be formatted in specific ways and/or use specific values to create transaction templates.
 
-Following are the flexibility options that are provided with the data structure and script capability of a transaction.
+The following are useful constituent parts of transactions that can be used to construct transaction templates:
 
-* Script by itself is a programming language which allows to build custom logic in a transaction to allow for customised usage.
-* Custom conditions can be encoded using the flexibility present in creation of Public key hash (or known as Bitcoin Addresses). The currently used addresses uses encoding contains a version field (0x00 for main network). Currently this value means that the encoding will be used for creation of a public key hash which defines the nature of the locking script to be used.
-* nLockTime and nSequence usage allows payment channels and various other flexibilities in terms of transaction building
-* Flexibility is also provided in usage of Sighash flag (more details in Electronic Contracts and Script)
+* **Version field:** A 4-byte field that can be used to denote a version or template.
+* **Script:** A programming language which allows custom logic to be added to locking scripts.
+* **Hashing and elliptic curve properties:** Keys and hashes can be combined or augmented such as with Type42 (provide link) key derivation trees&#x20;
+* **nLockTime and nSequence:** Allow payment channels, negotiations, and time locks.
+* **Sighash flags:** Allow certain parts of a transaction to be signed while keeping other parts unsigned so they can be updated without invalidating the transactio (find out more here) (link to sighash flags).
 
-{% hint style="info" %}
-The receiver of a payment does a template match on the script. Currently, receivers only accept two templates: direct payment and bitcoin address. Future versions can add templates for more transaction types and nodes running that version or higher will be able to receive them. All versions of nodes in the network can verify and process any new transactions into blocks, even though they may not know how to read them.
-{% endhint %}
+## Transaction Template example : Pay-to-Public-Key-Hash (P2PKH)
 
-### Transaction Template example : Payment to public key (hash)
-
-"Pay-to-Public Key Hash" (P2PKH) is one of the most widely used template.
+"Pay-to-Public Key Hash" (P2PKH) is the most widely used template.
 
 To provide some insight into what the script looks like, below is the unlocking and locking script of a P2PKH script:
 
@@ -53,7 +50,7 @@ Another slightly different variation of this is a P2PK or pay to public key wher
 The pubKeyHash in the Locking script is the public key hashed twice: first with SHA-256 and then with RIPEMD-160. A Bitcoin address is actually a pubKeyHash prepended by a version byte number and encoded in Base58Check format. In other words, we can consider a Bitcoin address is a compact representation of a public key hash puzzle.
 {% endhint %}
 
-### Transaction Template example : Multi-Signature Transactions
+### Transaction Template example : Multi-Signature Transactions (P2MS or MultSig)
 
 Also knowns as P2MS - Pay to Multi Sig transactions.
 
