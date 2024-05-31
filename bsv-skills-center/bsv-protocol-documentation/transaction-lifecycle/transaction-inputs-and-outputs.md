@@ -4,23 +4,25 @@ description: Data structure composition of a transaction
 
 # Transaction Inputs and Outputs
 
-A transaction is a standardised data structure encoding a transfer of some digital asset from the first party to a second party. At a high level, each transaction comprises inputs and outputs.
+A transaction is a standardised data structure encoding an ownership transfer of some amount of digital commodity tokens (satoshis) from one party to another. At a high level, each transaction comprises inputs and outputs.
 
-The inputs of a transaction consist of the following information:
+### The inputs of a transaction consist of the following information:
 
-1. A pointer to the record - a previous output on the ledger - that the digital asset exists.
-2. The requisite unlocking condition(s) that authorise the sender (i.e. the first party) to transfer ownership of the asset (i.e. spend it). This will typically be a digital signature or a secret known only to the first party.
+1. The TXID and output index of the UTXO being spent .
+2. The requisite unlocking condition(s) that authorise the sender (i.e. the first party) to transfer ownership of the asset (i.e. spend it). This can be any message or data that satisfies the locking conditions of the UTXO such that the added information makes the UTXO locking script evaluate to TRUE.
 
-The outputs of a transaction each specify the following information:
+### The outputs of a transaction each specify the following information:
 
-1. A recipient (i.e. the second party) to whom the ownership of the digital asset is transferred.
+1. A recipient (i.e. the second party) to whom the ownership of the commodity tokens(s) is transferred.
 2. The locking condition(s) that specifies how the recipient may subsequently unlock, and thus ‘spend’, the digital asset.
 
-Each transaction to be recorded on the blockchain ledger is assigned a unique identifier (a Transaction Identifier or TxID).
+Each transaction to be recorded on the blockchain ledger is assigned a unique identifier (a Transaction Identifier or TXID).
 
 <figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide01.png" alt=""><figcaption></figcaption></figure>
 
-Input in the transaction is to have a set of fields that unlock funds from the previous unspent output. The nature of the unlocking process depends on the lock used when the output was created in the previous transaction (UTXO), which is being spent. There is no specific limit imposed on the number of inputs or number of outputs, but the technical limit is about 2 raised to 32 inputs. Typically, the transaction size limits imposed by miners will come into effect before the number limit is reached.
+The nature of the unlocking process depends on the locking script used when the output was created in the previous transaction.
+
+There is no practical limit imposed on the number of inputs or outputs a transaction can contain, but the technical limit is about 2 raised to 32 inputs. The transaction size limits imposed by miners will come into effect before the number limit is reached.
 
 The overall data structure of a transaction is shown in the following diagram.
 
