@@ -42,7 +42,6 @@
     * [Constructing a transaction](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/constructing-a-transaction.md)
     * [Sequence Number and Time Locking](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/sequence-number-and-time-locking.md)
     * [Transaction Templates](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/transaction-templates.md)
-    * [Transaction Processing](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/transaction-processing.md)
     * [Op\_codes](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/opcodes-used-in-script.md)
   * [Privacy](bsv-skills-center/bsv-protocol-documentation/privacy/README.md)
     * [Keys and Identity](bsv-skills-center/bsv-protocol-documentation/privacy/keys-and-identity.md)
