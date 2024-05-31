@@ -30,9 +30,7 @@ A transaction is in one of the following mempools:
 
 The following diagram shows the interactions with other components.
 
-<figure><img src="../.gitbook/assets/NodeAndItsOperations_Slide09.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide09.png" alt=""><figcaption></figcaption></figure>
 
 The following steps describe the functionality of the Mempool during its usage in various transaction validation, block assembly and validation processes.
 

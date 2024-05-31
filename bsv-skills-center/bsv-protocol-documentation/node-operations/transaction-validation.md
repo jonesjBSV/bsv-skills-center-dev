@@ -31,14 +31,14 @@ A logical summary of the validation checks done as part of transaction validatio
 
 These conditions are part of the transaction validation process, and every transaction goes through these validation steps. A high-level view of what happens in the transaction validation process is described in the following diagram.
 
-<figure><img src="../.gitbook/assets/NodeAndItsOperations_Slide07.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide07.png" alt=""><figcaption></figcaption></figure>
 
 A new transaction that is received by the BSN is passed on to the transaction manager component, which kick-starts the transaction validation process. There are four components that make up the transaction validation process. Let us look at each one of them.
 
 {% hint style="info" %}
 Nodes do not need to validate every transaction. In fact, the White Paper states that “Nodes can leave and rejoin the network at will, accepting the proof-of-work chain as proof of what happened while they were gone”.
 
-The white paper defines what a node does, if a node receives a transaction, it MUST validate and propagate it.&#x20;
+The white paper defines what a node does, if a node receives a transaction, it MUST validate and propagate it.
 
 A node can stop accepting transactions, but they risk losses in terms of their being able to compete with other nodes who accept all transactions.
 {% endhint %}
@@ -75,5 +75,5 @@ The BSV ScriptEngine performs the validation for the script presented to it by t
 These components together deliver the transaction validation functionality. In doing so, they also interact with the UTXO Storage component and Mempool components.
 
 {% hint style="info" %}
-Block subsidy as block reward is a payment under a unilateral agreement made to an agent of the network (the node) for the provisioning of transaction time-stamping, ordering and validation services.&#x20;
+Block subsidy as block reward is a payment under a unilateral agreement made to an agent of the network (the node) for the provisioning of transaction time-stamping, ordering and validation services.
 {% endhint %}

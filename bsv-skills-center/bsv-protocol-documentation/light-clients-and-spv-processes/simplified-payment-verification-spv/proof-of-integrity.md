@@ -63,12 +63,12 @@ To summarise, the integrity of the locking script is a critical element in provi
 
 When the integrity of all three SPV processes are ensured, true peer-to-peer payments, that are secure and effectively instant, are possible.
 
-<figure><img src="../../.gitbook/assets/LightClientsandSPVInfastructures_Slide06 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/LightClientsandSPVInfastructures_Slide06%20(1).png" alt=""><figcaption></figcaption></figure>
 
 SPV systems are applications that are quite small and basic and, although this example demonstrates a payment application, similar applications for data transactions can be built using the same concepts and ideas. These applications are called Light Clients and the infrastructure design is referred to as SPV infrastructure.
 
 {% hint style="info" %}
-Reference :&#x20;
+Reference :
 
 1. Inspired by Work done by nChain Researcher, Wei Zhang [https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c](https://medium.com/nchain/simplified-payment-verification-48ac60f1b26c)
 {% endhint %}

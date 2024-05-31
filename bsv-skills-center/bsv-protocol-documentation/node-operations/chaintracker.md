@@ -22,12 +22,12 @@ ChainTracker will query other peers in the network to get headers of the blocks 
 
 An overview of Chain Tracker is provided in the following diagram:
 
-<figure><img src="../.gitbook/assets/NodeAndItsOperations_Slide06.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide06.png" alt=""><figcaption></figcaption></figure>
 
 It is the central component that interacts with the Tip Manager, which monitors incoming communication from Chain Trackers of other nodes via BSN to receive the TipIds.
 
 ChainTracker also communicates with mempool to sync it with the active tip id, and when it needs to update the valid tip id recognised by the mempool, it sends a message to Mempool for this realignment on the tip id; the process itself is termed pool rebase. It also interacts with the UTXO storage services to ensure the tip recognised by them is in sync with the longest tip recognised by the network. This ensures that the UTXOs and their status are reflected correctly based on the longest chain of work in the blockchain.
 
 {% hint style="info" %}
-One of the most important functions of a node is to always make sure to be aware of the longest chain of blocks which is performed by ChainTracker. It also maintains the log of various possible chain-tips which could become the longest chain just in case. This means that it is always tracking temporary forks that appear and disappear with time in the network&#x20;
+One of the most important functions of a node is to always make sure to be aware of the longest chain of blocks which is performed by ChainTracker. It also maintains the log of various possible chain-tips which could become the longest chain just in case. This means that it is always tracking temporary forks that appear and disappear with time in the network
 {% endhint %}

@@ -18,14 +18,14 @@ The outputs of a transaction each specify the following information:
 
 Each transaction to be recorded on the blockchain ledger is assigned a unique identifier (a Transaction Identifier or TxID).
 
-<figure><img src="../.gitbook/assets/TransactionLifecycle_Slide01.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide01.png" alt=""><figcaption></figcaption></figure>
 
 Input in the transaction is to have a set of fields that unlock funds from the previous unspent output. The nature of the unlocking process depends on the lock used when the output was created in the previous transaction (UTXO), which is being spent. There is no specific limit imposed on the number of inputs or number of outputs, but the technical limit is about 2 raised to 32 inputs. Typically, the transaction size limits imposed by miners will come into effect before the number limit is reached.
 
 The overall data structure of a transaction is shown in the following diagram.
 
-<figure><img src="../.gitbook/assets/TransactionLifecycle_Slide02.png" alt=""><figcaption><p>Internal data structure of a transaction</p></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/TransactionLifecycle_Slide02.png" alt=""><figcaption><p>Internal data structure of a transaction</p></figcaption></figure>
 
 {% hint style="info" %}
-One of the biggest nuisances in transaction formats used in bitcoin is the usage of little endian and big endian format for different things. Always keep in mind this property as part of debugging process when developing code to build transactions.&#x20;
+One of the biggest nuisances in transaction formats used in bitcoin is the usage of little endian and big endian format for different things. Always keep in mind this property as part of debugging process when developing code to build transactions.
 {% endhint %}

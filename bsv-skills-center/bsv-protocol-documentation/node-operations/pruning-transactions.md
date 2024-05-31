@@ -10,7 +10,7 @@ Nodes can minimise storage requirements by pruning transaction data that have a 
 
 Let us have a look at what this means.
 
-<figure><img src="../.gitbook/assets/NodeAndItsOperations_Slide14 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/NodeAndItsOperations_Slide14%20(1).png" alt=""><figcaption></figcaption></figure>
 
 Suppose in the demonstrated block, Bn, there are tx1 to tx4, which contain UTXOs that are spent by transactions in later blocks, and by the time the chain-tip is at block Bn+m, all of the UTXOs are spent. Now as shown in the diagram, the orange data blocks of transaction data is something that the node will never have any use for. The node, as shown, can delete transaction data for Tx1, Tx2, Tx3 and Tx4 and just use their hash (TxID) and still will be able to calculate the Merkle root for this block for any verification purposes in future. In fact, it can go a bit further since the complete set can be deleted, including the hashes to the next level, as shown in the diagram. So, the node can delete the hashes Tx1 to Tx4 on level 1, HTx1-2 and HTx3-4 on level 2 as well, and the hash HTx1-2-3-4 can still provide the needed hash for any future Merkle root calculation needs that could come up for example when validating the presence of transaction Tx5 in the block.
 

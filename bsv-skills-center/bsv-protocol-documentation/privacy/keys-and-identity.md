@@ -12,11 +12,11 @@ In the Account model every account is represented by an Identity. A common misco
 
 A UTXO is created when funds are locked to a Public Key infrastructure (PKI) key-pair. The logic was extended from legacy-based understanding that, since it stores funds, the key-pair becomes an identifier of its owner. This is not the case, as is illustrated in the example below.
 
-<figure><img src="../.gitbook/assets/IdentityAndPrivacy_Slide02 (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/IdentityAndPrivacy_Slide02%20(1).png" alt=""><figcaption></figcaption></figure>
 
 For Payment transactions (any type of transactions which focus on using BSV as payment method)
 
-<figure><img src="../.gitbook/assets/IdentityAndPrivacy_Slide03.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/IdentityAndPrivacy_Slide03.png" alt=""><figcaption></figcaption></figure>
 
 The above examples depict scenarios where data and payment transactions are made in hypothetical entities and where identity resides in these flows. It is not possible for anyone to determine who the transactions and funds belong to on the blockchain, unless someone publicly declares that they own a certain key (presuming they have some form of proof of ownership). But that again, is the same as a merchant storing KYC information; the record-keeping of identity is done off-chain and never on the blockchain.
 
