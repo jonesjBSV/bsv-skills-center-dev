@@ -33,7 +33,7 @@
   * [SPV Wallets, Overlays, and SPV Processes](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/README.md)
     * [Simplified Payment Verification (SPV)](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/README.md)
     * [Instant Payments](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/instant-payments.md)
-    * [Proof of Integrity](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/proof-of-integrity.md)
+    * [Integrity Checks](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/simplified-payment-verification-spv/proof-of-integrity.md)
     * [SPV Wallets](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/light-clients-in-blockchain.md)
     * [Overlays](bsv-skills-center/bsv-protocol-documentation/light-clients-and-spv-processes/overlays.md)
   * [Transaction Lifecycle](bsv-skills-center/bsv-protocol-documentation/transaction-lifecycle/README.md)

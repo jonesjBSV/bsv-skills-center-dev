@@ -1,8 +1,8 @@
 ---
 description: >-
-  Blockchain is truly decentralised when records and information that are
-  contained within it are sent via SPV, IP to IP or person-to-person and
-  transactions are maintained by their owners
+  The title of the Bitcoin white paper: "Bitcoin: when records and information
+  that are contained within it are sent via SPV, IP to IP or person-to-person
+  and transactions are maintained by their owners
 ---
 
 # SPV Wallets

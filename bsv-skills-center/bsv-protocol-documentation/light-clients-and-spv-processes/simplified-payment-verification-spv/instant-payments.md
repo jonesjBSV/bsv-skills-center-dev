@@ -69,4 +69,4 @@ The Simplified Payment Verification check can provide integrity for all the data
 
 As the merchant, Bob can accept payment directly from Alice (peer-to-peer, possibly offline) and be confident that he will not be cheated by Alice by performing a Simplified payment verification process check.
 
-This process typically takes less than 500ms, making these payments effectively instant and, with every payment being settled on the blockchain, safe and secure. The time taken to confirm payment contrasts with a traditional payment network where settlement can typically take anything from a few hours to several days.
+This process is effectively instantaneous and with every payment being settled on the blockchain, safe and secure. The time taken to confirm payment contrasts with a traditional payment network where settlement can typically take anything from a few hours to several days.
