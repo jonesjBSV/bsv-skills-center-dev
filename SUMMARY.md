@@ -47,7 +47,7 @@
     * [Keys and Identity](bsv-skills-center/bsv-protocol-documentation/privacy/keys-and-identity.md)
     * [Private vs Anonymous](bsv-skills-center/bsv-protocol-documentation/privacy/private-vs-anonymous.md)
     * [Digital Signatures](bsv-skills-center/bsv-protocol-documentation/privacy/digital-signatures.md)
-    * [Privacy in Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md)
+    * [Privacy on the Public Blockchain](bsv-skills-center/bsv-protocol-documentation/privacy/privacy-in-public-blockchain.md)
 * [The Benefits of BSV Blockchain](bsv-skills-center/the-benefits-of-bsv-blockchain.md)
 
 ## Network Topology
