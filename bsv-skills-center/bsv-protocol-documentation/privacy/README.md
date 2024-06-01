@@ -1,13 +1,12 @@
 ---
 description: >-
   The concept of identity and privacy have been highly misrepresented in
-  relation to blockchain systems. We will investigate the concepts of
-  confidentiality, and privacy in this section
+  relation to blockchain systems.
 ---
 
 # Privacy
 
-A public blockchain defined by the Bitcoin whitepaper publishes transactions in cleartext on the ledger, which means that any information published as part of the transaction is available globally for anyone to read and use. This is a very different approach to privacy than what is traditionally done, especially when it comes to financial transactions. The whitepaper itself describes this concept as shown in the diagram below.
+The Blockchain is defined by the Bitcoin white paper. Transactions are timestamped to the ledger in cleartext; meaning it contents can be read and understood by any entity that receives it. However, this does not mean Bitcoin is insecure or isn't private.
 
 <figure><img src="https://github.com/jonesjBSV/bsv-skills-center/blob/master/bsv-skills-center/bsv-protocol-documentation/.gitbook/assets/IdentityAndPrivacy_Slide01.png" alt=""><figcaption></figcaption></figure>
 
